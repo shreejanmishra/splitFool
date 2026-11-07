@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="28" fill="#0f172a" />
+  <circle cx="50" cy="50" r="36" stroke="#1e293b" stroke-width="2" />
+  <!-- Split curved arcs -->
+  <path d="M28 42 C 34 26, 66 26, 72 42" stroke="url(#grad)" stroke-width="6" stroke-linecap="round" />
+  <path d="M72 58 C 66 74, 34 74, 28 58" stroke="url(#grad)" stroke-width="6" stroke-linecap="round" />
+  <circle cx="36" cy="50" r="5" fill="#14b8a6" filter="url(#glow)" />
+  <circle cx="64" cy="50" r="5" fill="#f43f5e" filter="url(#glow)" />
+  <path d="M46 50 L54 50" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" />
+</svg>
