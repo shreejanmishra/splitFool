@@ -1,0 +1,24 @@
+{
+  "name": "splitfool",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "server",
+    "apps/web",
+    "apps/mobile"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w @splitfool/server",
+    "dev:web": "npm run dev -w @splitfool/web",
+    "start:mobile": "npm run start -w @splitfool/mobile",
+    "android": "npm run android -w @splitfool/mobile",
+    "build": "npm run build -w @splitfool/server && npm run build -w @splitfool/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
